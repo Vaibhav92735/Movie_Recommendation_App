@@ -1,0 +1,65 @@
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KNN Report</title>
+  
+<meta name="description" content="Report of KNN Model to implement Movie Recommendation App">
+
+<link rel="stylesheet" href="./assets/style.css">
+
+<link rel="icon" href="./assets/images/favicon.png">
+<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+
+  </head>
+<header>
+   <nav>
+  
+  <a href="">Home</a>
+  
+  <a href="./report_final.pdf">Report</a>
+  
+  <a href="https://github.com/MarketingPipeline/Simply-Docs"><svg class="icon" viewBox="0 0 32 32"><path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path></svg>Github</a>
+  
+</nav>
+
+      <h1>K Nearest Neighbours</h1>
+      <p>Explanation of the first Model- KNN or K Nearest Neighbours Model</p>
+    </header>
+<main>
+<h2>KNN Model</h2>
+<p>K-Nearest Neighbors (KNN) is a simple yet powerful supervised machine learning algorithm used for classification
+   and regression tasks. The principle behind KNN is intuitive: it classifies or predicts a new data point's label
+    or value based on its proximity to existing data points in the feature space. In classification, KNN assigns the
+     majority class among its K nearest neighbors to the new data point. Similarly, in regression, it predicts the average value of the target variable among its nearest neighbors. The choice of K, the number of neighbors considered, is a crucial parameter in KNN, influencing the model's performance and flexibility. While KNN is easy to understand and implement, it can be computationally expensive for large datasets and sensitive to irrelevant or noisy features. Additionally, it requires careful selection of distance metrics and appropriate preprocessing to handle varying feature scales effectively. Despite its limitations, KNN remains a versatile and widely-used algorithm, particularly suitable for small to medium-sized datasets with well-defined distance metrics.</p>
+<h4>Let us now look at its implementation in our model</h4>
+<ul>
+  <li>This model basically works to recommend movies to a user via finding similar users and sggesting movies based on their preferences.</li>
+
+  <li>First we will calculate user similarity based on movie ratings. Meaning
+    consider the movies to be dimensions and the ratings to be the values
+    on those axes.</li>
+  <li>Here we will be using cosine similarity. Then we can consider top 20
+similar user (neighbors).</li>
+  <li>Then, we average the ratings given by neighbors on testing data. </li>
+  <li>Finally, we recommend the top 5 movies.  </li>
+  <li>The Final User Similarity matrix looks something like this:</li>
+	</a> 
+  <img src="./assets\images\image_knn.png" alt="Description of the image">
+</ul>
+</main>
+<!-- <a href="/report_final.pdf"><button>To view full Report</button></a> -->
+
+
+
+<footer>
+      <p>Team Members:</p>
+  <small>-Ambati Rahul Reddy</small>
+  <small>-    Bisamallah Abhinay</small>
+  <small>    -    Sahil Bharadwaj</small>
+  <small>    -    Fazil</small>
+  <small>    -    Vaibhav Gupta-</small>
+    </footer>
+   
+ <script src="https://cdn.jsdelivr.net/gh/MarketingPipeline/Markdown-Tag/markdown-tag.js"></script> 
