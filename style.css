@@ -1,0 +1,330 @@
+body {
+  margin: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Georgia', serif;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  color: white;
+  padding: 10px 20px; /* Decreased vertical padding */
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 60%;
+  z-index: 1000; /* Ensure the navbar appears above other content */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  color: lightgray;
+}
+
+.logo {
+  font-size: 24px; /* Decreased font size */
+}
+
+.report-container {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 50px; /* Add margin to push the container down */
+}
+
+.report-container h1 {
+  font-size: 60px; /* Adjust the font size as needed */
+  margin-bottom: 10px; /* Reduce the bottom margin */
+  color: black;
+}
+
+.report-container h2 {
+  font-size: 24px; /* Adjust the font size as needed */
+  margin-top: 0; /* Reset the top margin */
+  margin-bottom: 20px; /* Adjust the bottom margin */
+  color: black;
+}
+
+
+.slider-container {
+  position: relative;
+  width: 60%;
+  max-width: 800px; /* Adjust maximum width as needed */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 20px;
+  opacity: 0.5;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.btn.prev {
+  left: 10px;
+}
+
+.btn.next {
+  right: 10px;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.problem-container {
+  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+  padding: 20px;
+  margin: 50px auto; /* Center the container horizontally and add margin from top */
+  width: 65%; /* Use 70% of the screen width */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.problem-container h2 {
+  font-size: 24px;
+  margin-top: 0; /* Reset the top margin */
+  margin-bottom: 20px;
+}
+
+.problem-container p {
+  font-size: 16px;
+  text-align: left; /* Align content to the left */
+  color: black;
+}
+
+.abstract-container {
+  padding: 20px;
+  margin: 20px 0; /* Add margin from top and bottom */
+  width: 60%; /* Use 50% of the screen width */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.abstract-container h2 {
+  font-size: 24px;
+  margin-top: 0; /* Reset the top margin */
+  margin-bottom: 20px;
+}
+
+.abstract-container p {
+  font-size: 16px;
+  text-align: left; /* Align content to the left */
+}
+
+.thought-container {
+  padding: 20px;
+  margin: 20px auto; /* Center the container horizontally and add margin */
+  width: 60%; /* Use 70% of the screen width */
+  border: 2px solid #ccc; /* Add a border for visual separation */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.thought-container h2 {
+  font-size: 24px;
+  margin-top: 0; /* Reset the top margin */
+  margin-bottom: 20px;
+  color: #333; /* Set text color */
+}
+
+.thought-container ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0;
+}
+
+.thought-container ul li {
+  margin-bottom: 10px;
+}
+
+/* Style for the image */
+.thought-container img {
+  display: block;
+  margin: 10px auto; /* Center the image horizontally and add margin */
+  max-width: 100%; /* Ensure the image does not exceed its container width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.data-container {
+  padding: 20px;
+  margin: 20px auto; /* Center the container horizontally and add margin */
+  width: 60%; /* Use 70% of the screen width */
+  border: 2px solid #ccc; /* Add a border for visual separation */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.data-container h2 {
+  font-size: 24px;
+  margin-top: 0; /* Reset the top margin */
+  margin-bottom: 20px;
+  color: #333; /* Set text color */
+}
+
+.data-container p {
+  margin-bottom: 10px;
+}
+
+.data-container ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0;
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+}
+
+.data-container ul img {
+  max-width: 48%; /* Reduce the maximum width of the image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.Implementations-container {
+  padding: 20px;
+  margin: 20px auto; /* Center the container horizontally and add margin */
+  width: 60%; /* Use 70% of the screen width */
+  border: 2px solid #ccc; /* Add a border for visual separation */
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.Implementations-container h2 {
+  font-size: 24px;
+  margin-top: 0; /* Reset the top margin */
+  margin-bottom: 20px;
+  color: #333; /* Set text color */
+}
+
+.Naive-Bayes-container {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0; /* Greyish shade */
+    border-radius: 10px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.Naive-Bayes-container:hover {
+    background-color: #e0e0e0; /* Darker shade on hover */
+}
+
+.Naive-Bayes-container h3 {
+    font-size: 20px;
+    margin-top: 0; /* Reset the top margin */
+    margin-bottom: 10px;
+}
+
+.Naive-Bayes-container p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.video-container {
+  padding: 20px;
+  margin: 20px auto;
+  width: 60%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+.video-container h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.video-container h4 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.video-container video {
+  max-width: 1000px; /* Set maximum width to ensure responsiveness */
+  height: 500px; /* Maintain aspect ratio */
+  border-radius: 5px; /* Add some border radius to the video */
+  /* margin-left: 100px; */
+}
+
+.bibliogrphy-container {
+  padding: 20px;
+  margin: 20px auto;
+  width: 60%;
+}
+
+.bibliogrphy-container h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.bibliogrphy-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bibliogrphy-container ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.bibliogrphy-container ul li a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+.bibliogrphy-container ul li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+footer {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.team-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.team-member {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.team-member img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.footer-details {
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-details p {
+  margin: 5px 0;
+}

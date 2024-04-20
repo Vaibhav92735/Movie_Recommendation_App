@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRML Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 10px;
+      font-family: Georgia, serif;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Transparent black background */
+      color: white;
+      padding: 10px 10px;
+      /* Increased padding */
+      display: flex;
+      justify-content: space-between;
+      position: fixed;
+      width: 60%;
+      z-index: 1000;
+      /* Ensure the navbar appears above other content */
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-links li a:hover {
+      color: lightgray;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#problem-container">Problem Statement</a></li>
+      <li><a href="#abstract-container">Abstract</a></li>
+      <li><a href="#thought-container">Thought Process</a></li>
+      <li><a href="#data-container">Data Visualization and Info</a></li>
+      <li><a href="#Implementations-container">Model Details</a></li>
+      <li><a href="#video-container">Video</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="report-container">
+    <h1>PRML Course Project</h1>
+    <h2>Web Page to give the report</h2>
+  </div>
+
+  <div class="slider-container">
+    <div class="image-container">
+      <img src="https://picsum.photos/id/237/800/400" alt="image" />
+      <img src="https://picsum.photos/id/1/800/400" alt="image" />
+      <img src="https://picsum.photos/id/10/800/400" alt="image" />
+      <img src="https://picsum.photos/id/20/800/400" alt="image" />
+      <img src="https://picsum.photos/id/200/800/400" alt="image" />
+    </div>
+    <i class="fas fa-angle-double-left btn prev"></i>
+    <i class="fas fa-angle-double-right btn next"></i>
+  </div>
+
+  <div id="problem-container" class="problem-container">
+    <h2>Problem Statement</h2>
+    <p>Movie Recommendation System: A recommendation system's purpose
+      is to search for content that would be interesting to an individual. Recommendation systems are AI-based
+      algorithms that skim through all possible
+      options and create a customized list of items that are interesting and relevant
+      to an individual. These results are based on their profile, search/browsing
+      history, what other people with similar traits/demographics are watching,
+      and how likely you are to watch those movies.</p>
+  </div>
+
+  <div id="abstract-container" class="abstract-container">
+    <h2>Abstract</h2>
+    <p>In this Project, we have implemented a Movie Recommendation System using different models which are KNN,
+      Naive Bayes, Linear Regression, SVM and Random Forest. There are two types of recommendation systems,
+      Collaborative and
+      Item based. We have implemented Item Based Recommendation System using KNN and for Collaborative System we have
+      implemented rest others. For this project, we have used data provided from kggle and used web scraping to collect
+      posters and others details.
+    </p>
+  </div>
+
+  <div id="thought-container" class="thought-container">
+    <h2>Thought Process</h2>
+    <ul>
+      <li>
+        The project aims to develop a recommender system for this (MOVIE)
+      </li>
+      <li>Broadly classifying there are two types of recommender systems :</li>
+      <img src="image1.png">
+      <li>Content based Filtering : In this the model tries to recommend the
+        user based on his past queries, viewed movies, movies which he liked,
+        browsing history and the suggest a movie which is similar to those
+        features</li>
+      <li>Collaborative Filtering : In this we try to find similar unrelated
+        users and and as they are have same interest what ever a user views it
+        will be recommended to the other user</li>
+      <li>Hybrid : Content based Filtering + Collaborative Filtering</li>
+      <li>So it was decided that we would be using a hybrid model based on given task</li>
+    </ul>
+  </div>
+
+  <div id="data-container" class="data-container">
+    <h2>Data Visualization and Info</h2>
+    <p>The Data we have use has been taken from kaggel and it contains csv files through which we get the datas
+      containing the informations: userID, movieID, tags, ratings, genre etc. and further we did web scraping in order
+      to get the details such as Directors, Casts, Descriptions etc.
+    </p>
+    <p>Two plots are shown below to visulaize the data:</p>
+    <ul>
+      <img src="image2.png">
+      <img src="image3.png">
+    </ul>
+  </div>
+
+  <div id="Implementations-container" class="Implementations-container">
+    <h2>Model Details</h2>
+    <div class="Naive-Bayes-container" onclick="openKNNMain()">
+      <h3>KNN Model</h3>
+      <p>K-Nearest Neighbors (KNN) is a simple yet powerful supervised machine learning algorithm used for
+        classification
+        and regression tasks. The principle behind KNN is intuitive: it classifies or predicts a new data point's label
+        or value based on its proximity to existing data points in the feature space. In classification, ...</p>
+    </div>
+    <div class="Naive-Bayes-container" onclick="openNaiveMain()">
+      <h3>Naive Bayes Model</h3>
+      <p>Naive Bayes is a probabilistic classifier based on Bayes' theorem, with the "naive" assumption of feature
+        independence.
+        It's efficient, easy to implement, and works well with high-dimensional data. Despite its simplicity, Naive
+        Bayes
+        often performs surprisingly well in practice, making it popular for text classification ...</p>
+    </div>
+    <div class="Naive-Bayes-container" onclick="openLinRegMain()">
+      <h3>Linear Regression Model</h3>
+      <p>Linear Regression models the relationship between a dependent variable and one or more independent variables by
+        fitting a straight line to the data. It seeks to minimize the difference between observed and predicted values,
+        estimating coefficients for the line to best represent the data's linear trend. This method is ...</p>
+    </div>
+    <div class="Naive-Bayes-container" onclick="openRandomMain()">
+      <h3>Random Forest Model</h3>
+      <p>Random Forest is an ensemble learning method that builds multiple decision trees during training and merges
+        their predictions to improve accuracy and reduce overfitting. Each tree in the forest is built using a random
+        subset of features and a random subset of the training data. Predictions are made by averaging or voting ...</p>
+    </div>
+    <div class="Naive-Bayes-container" onclick="openSVMMain()">
+      <h3>SVM Model</h3>
+      <p>Support Vector Machine (SVM) is a powerful supervised machine learning algorithm used for classification and
+        regression tasks. It finds the optimal hyperplane in a high-dimensional space that best separates data points
+        of different classes. SVM aims to maximize the margin between classes, making it robust to outliers ...</p>
+    </div>
+  </div>
+
+  <div id="video-container" class="video-container">
+    <h2>Video Explanation</h2>
+    <h4>Here is a video explanation of the entire project:</h4>
+
+    <video controls>
+      <source src="Multiply_by_6_using_shift_register.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div id="bibliogrphy-container" class="bibliogrphy-container">
+    <h2>Bibliography</h2>
+    <ul>
+      <li><a
+          href="https://www.kaggle.com/datasets/shubhammehta21/movie-lens-small-latest-dataset">Kaggle</a>
+      </li>
+      <li><a
+          href="https://www.youtube.com/watch?v=1xtrIEwY_zY&ab_channel=CampusX">CampusX</a>
+      </li>
+      <li><a href="https://www.wikipedia.org/">Wikipedia</a></li>
+      <li><a href="https://www.analyticsvidhya.com/blog/2020/11/create-your-own-movie-movie-recommendation-system/">Analytics Vidya</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    <div class="team-section">
+      <h2>Our Team- Group 30</h2>
+      <div class="team-member">
+        <img src="Vaibhav.jpg" alt="Team Member 1">
+        <h3>Vaibhav Gupta</h3>
+        <p>B22CS058</p>
+      </div>
+      <div class="team-member">
+        <img src="Vaibhav.jpg" alt="Team Member 2">
+        <h3>Ambati Rahul Reddy</h3>
+        <p>B22CS088</p>
+      </div>
+      <div class="team-member">
+        <img src="Vaibhav.jpg" alt="Team Member 3">
+        <h3>Sahil Bharadwaj</h3>
+        <p>B22EE072</p>
+      </div>
+      <div class="team-member">
+        <img src="Vaibhav.jpg" alt="Team Member 4">
+        <h3>Bisamallah Abhinay</h3>
+        <p>B22AI012</p>
+      </div>
+      <div class="team-member">
+        <img src="Vaibhav.jpg" alt="Team Member 5">
+        <h3>Fazil</h3>
+        <p>B22AI046</p>
+      </div>
+    </div>
+    
+    <div class="footer-details">
+      <p><a href="report.pdf" target="_blank">Mid-term Report</a></p>
+      <p><a href="report_final.pdf" target="_blank">Final Report</a></p>
+      <p>Group No: 30</p>
+    </div>
+  </footer>
+  
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
