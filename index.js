@@ -55,3 +55,7 @@ function openRandomMain() {
 function openSVMMain() {
   window.open("SVM-main/index.html", "_blank");
 }
+
+function openBOWMain() {
+  window.open("BagOfWords-main/index.html", "_blank");
+}
